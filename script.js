@@ -209,3 +209,12 @@ if (hero) {
     });
 
 }
+studentBtn.addEventListener("click", ()=>{
+    document.querySelector(".main-student-form").classList.add("active-form");
+    document.querySelector(".main-alumni-form").classList.remove("active-form");
+});
+
+alumniBtn.addEventListener("click", ()=>{
+    document.querySelector(".main-alumni-form").classList.add("active-form");
+    document.querySelector(".main-student-form").classList.remove("active-form");
+});
