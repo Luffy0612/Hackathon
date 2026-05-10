@@ -25,10 +25,6 @@
 
 <body>
 
-    <!-- CUSTOM CURSOR -->
-
-    <div class="custom-cursor"></div>
-
     <!-- LOADER -->
 
     <div class="loader">
@@ -87,22 +83,32 @@
 
             </div>
 
-            <!-- NAV BUTTONS -->
-
             <div class="nav-buttons">
 
+                <!-- SMALL NAV LINKS -->
+
+                <div class="top-links">
+
+                    <a href="#">Home</a>
+
+                    <a href="#aboutSection">About</a>
+
+                    <a href="#alumniSection">Alumni</a>
+
+                    <a href="#">Events</a>
+
+                </div>
+
+                <!-- AUTH BUTTONS -->
+
                 <button class="login-btn">
-
                     Login
-
                 </button>
 
                 <a href="register.html">
 
                     <button class="register-btn">
-
                         Register
-
                     </button>
 
                 </a>
@@ -143,7 +149,7 @@
 
     <!-- ABOUT SECTION -->
 
-    <section class="about">
+    <section class="about" id="aboutSection">
 
         <div class="about-left">
 
@@ -172,11 +178,15 @@
 
             </p>
 
-            <button>
+            <a href="https://www.gbpuat.ac.in/" target="_blank">
 
-                Explore More
+                <button id="aboutBtn">
 
-            </button>
+                    Explore More
+
+                </button>
+
+</a>
 
         </div>
 
@@ -184,7 +194,7 @@
 
     <!-- ALUMNI SECTION -->
 
-<section class="alumni-section">
+<section class="alumni-section" id="alumniSection">
 
     <h2>Explore Alumni By College</h2>
 
@@ -548,31 +558,37 @@
 
         <h2>Our Alumni Work At</h2>
 
-        <div class="marquee">
+<div class="marquee">
 
-            <div class="marquee-content">
+    <div class="marquee-content">
 
-                <span>Google</span>
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.microsoft.com" target="_blank">Microsoft</a>
+        <a href="https://www.amazon.com" target="_blank">Amazon</a>
+        <a href="https://www.isro.gov.in" target="_blank">ISRO</a>
+        <a href="https://icar.org.in" target="_blank">ICAR</a>
+        <a href="https://www.tcs.com" target="_blank">TCS</a>
+        <a href="https://www.infosys.com" target="_blank">Infosys</a>
+        <a href="https://www.wipro.com" target="_blank">Wipro</a>
+        <a href="https://about.meta.com" target="_blank">Meta</a>
+        <a href="https://www.adobe.com" target="_blank">Adobe</a>
 
-                <span>Microsoft</span>
+        <!-- DUPLICATE SAME SET -->
 
-                <span>Amazon</span>
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <a href="https://www.microsoft.com" target="_blank">Microsoft</a>
+        <a href="https://www.amazon.com" target="_blank">Amazon</a>
+        <a href="https://www.isro.gov.in" target="_blank">ISRO</a>
+        <a href="https://icar.org.in" target="_blank">ICAR</a>
+        <a href="https://www.tcs.com" target="_blank">TCS</a>
+        <a href="https://www.infosys.com" target="_blank">Infosys</a>
+        <a href="https://www.wipro.com" target="_blank">Wipro</a>
+        <a href="https://about.meta.com" target="_blank">Meta</a>
+        <a href="https://www.adobe.com" target="_blank">Adobe</a>
 
-                <span>ISRO</span>
+    </div>
 
-                <span>ICAR</span>
-
-                <span>TCS</span>
-
-                <span>Infosys</span>
-
-                <span>Wipro</span>
-
-                <span>Meta</span>
-
-                <span>Adobe</span>
-
-            </div>
+</div>
 
         </div>
 
@@ -603,9 +619,9 @@
 
                 <a href="#">Home</a>
 
-                <a href="#">About</a>
+                <a href="#aboutSection">About</a>
 
-                <a href="#">Alumni</a>
+                <a href="#alumniSection">Alumni</a>
 
                 <a href="#">Events</a>
 
@@ -619,7 +635,9 @@
 
                 <p>support@gbpuatconnect.com</p>
 
-                <p>+91 9876543210</p>
+                <p>+91 9958178262</p>
+
+                <p>+91 9259351195</p>
 
             </div>
 
@@ -641,27 +659,36 @@
 
     <div class="modal" id="authModal">
 
-        <div class="modal-box">
+        <div class="modal-box glass-modal">
 
             <span class="close-btn" id="closeModal">
-
                 &times;
-
             </span>
 
-            <h2>Welcome to GBPUAT Connect</h2>
+            <div class="modal-header">
 
-            <p>Select your role</p>
+                <h2>Welcome Back</h2>
+
+                <p>
+                    Login to GBPUAT Connect
+                </p>
+
+
+            </div>
+
+            <!-- ROLE BUTTONS -->
 
             <div class="role-selection">
 
-                <button class="student-option">
+                <button class="student-option active-role"
+                        type="button">
 
                     Student
 
                 </button>
 
-                <button class="alumni-option">
+                <button class="alumni-option"
+                        type="button">
 
                     Alumni
 
@@ -671,21 +698,38 @@
 
             <!-- STUDENT FORM -->
 
-            <form class="student-form">
+            <form class="student-form active-form-modal">
 
-                <input type="text" placeholder="Full Name">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
 
-                <input type="text" placeholder="College ID">
+                <div class="input-box">
+                    <input type="text" placeholder="College ID" required>
+                </div>
 
-                <input type="email" placeholder="Email">
+                <div class="input-box">
+                    <input type="email" placeholder="University Email" required>
+                </div>
 
-                <input type="password" placeholder="Password">
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                </div>
 
-                <button type="submit">
-
+                <button type="submit" class="auth-btn">
                     Login as Student
-
                 </button>
+                <p class="switch-register">
+
+                    New here?
+
+                    <a href="register.html">
+
+                        Create Account
+
+                    </a>
+
+                </p>
 
             </form>
 
@@ -693,27 +737,47 @@
 
             <form class="alumni-form">
 
-                <input type="text" placeholder="Full Name">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
 
-                <input type="text" placeholder="Passing Year">
+                <div class="input-box">
+                    <input type="text" placeholder="Passing Year" required>
+                </div>
 
-                <input type="text" placeholder="Company Name">
+                <div class="input-box">
+                    <input type="text" placeholder="Current Company" required>
+                </div>
 
-                <input type="email" placeholder="Email">
+                <div class="input-box">
+                    <input type="email" placeholder="Professional Email" required>
+                </div>
 
-                <input type="password" placeholder="Password">
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                </div>
 
-                <button type="submit">
-
+                <button type="submit" class="auth-btn">
                     Login as Alumni
-
                 </button>
+                <p class="switch-register">
+
+                    New here?
+
+                    <a href="register.html">
+
+                        Create Account
+
+                    </a>
+
+                </p>
 
             </form>
 
         </div>
 
     </div>
+
 
     <!-- GSAP -->
 
